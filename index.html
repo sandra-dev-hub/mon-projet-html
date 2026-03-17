@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaire d'enregistrement</title>
+</head>
+<body>
+
+    <h1>Portail d'Enregistrement</h1>
+
+    <form action="/traitement" method="POST">
+
+        <fieldset>
+            <legend>Informations Personnelles</legend>
+
+            <p>
+                <label for="nom">Nom complet :</label><br>
+                <input type="text" id="nom" name="user_nom" placeholder="Ex: sandichou" required>
+            </p>
+
+            <p>
+                <label for="mel">Adresse e-mail :</label><br>
+                <input type="email" id="mel" name="user_email" required>
+            </p>
+
+            <p>
+                <label for="pass">Mot de passe :</label><br>
+                <input type="password" id="pass" name="user_password" minlength="8" required>
+            </p>
+
+            <p>
+                <label for="naissance">Date de naissance :</label><br>
+                <input type="date" id="naissance" name="user_date_naissance">
+            </p>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Préférences de compte</legend>
+            
+            <p>
+                <label for="type_compte">Type de profil :</label><br>
+                <select id="type_compte" name="role">
+                    <option value="etudiant">Étudiant</option>
+                    <option value="developpeur">Développeur</option>
+                    <option value="admin">Administrateur</option>
+                </select>
+            </p>
+
+            <p>
+                <input type="checkbox" id="notif" name="notifications" checked>
+                <label for="notif">Recevoir les mises à jour par e-mail</label>
+            </p>
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Finaliser l'enregistrement</button>
+        
+        <button type="reset">tout effacer</button>
+
+    </form>
+
+</body>
+</html>
